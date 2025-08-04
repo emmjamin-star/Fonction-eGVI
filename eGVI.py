@@ -12,7 +12,7 @@ st.set_page_config(page_title="Score eGVI", layout="centered")
 st.title("🦿 Score eGVI - Interface interactive")
 
 # 1. Upload des fichiers .c3d
-st.header("1. Importer un ou plusieurs fichiers .c3d dont au moins un fichier de statique et un d'essai dynamique")
+st.header("1. Importer un ou plusieurs fichiers .c3d dont au moins un fichier d'essai statique et un d'essai dynamique")
 uploaded_files = st.file_uploader("Choisissez un ou plusieurs fichiers .c3d", type="c3d", accept_multiple_files=True)
 
 if uploaded_files:
@@ -296,7 +296,7 @@ if st.button("Lancer le calcul du score eGVI"):
       
         eGVI_G = 100+z_G
         eGVI_D = 100+z_D
-        eGVI = (GVI_D + GVI_G)/2
+        eGVI = (eGVI_D + eGVI_G)/2
      
         st.markdown("### 📊 Résultats du score eGVI")
         st.write(f"**Score eGVI** : {eGVI:.2f}")
