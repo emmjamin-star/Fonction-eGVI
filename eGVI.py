@@ -51,6 +51,7 @@ if uploaded_files:
     
     markersStat  = statique['data']['points']
     markers1 = acq1['data']['points']
+    data1 = acq1['data']['points']
 
 if st.button("Lancer le calcul du score eGVI"):
     try:
