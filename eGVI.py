@@ -140,11 +140,11 @@ if st.button("Lancer le calcul du score eGVI"):
         pVitesse_Dm = []
         pSA_Dm = []
         for i in [0, 1, 2] : 
-            pPA_Dm.append(PA_D[i] * 100 / PA_D_m) 
-            pDPas_Dm.append(DPas_D[i] * 100 / DPas_D_m)
-            pLPas_Dm.append(LPas_D[i] * 100 / LPas_D_m)
-            pVitesse_Dm.append(Vitesse_D[i] * 100 / Vitesse_D_m)
-            pSA_Dm.append(SA_D[i] * 100 / SA_D_m)
+            pPA_Dm.append(PA_D[i] / PA_D_m * 100) 
+            pDPas_Dm.append(DPas_D[i] / DPas_D_m * 100)
+            pLPas_Dm.append(LPas_D[i] / LPas_D_m * 100)
+            pVitesse_Dm.append(Vitesse_D[i] / Vitesse_D_m * 100)
+            pSA_Dm.append(SA_D[i] / SA_D_m * 100)
       
         # Différence absolue
         PA_D_f = []
@@ -154,11 +154,11 @@ if st.button("Lancer le calcul du score eGVI"):
         SA_D_f = []
       
         for i in [0, 1]:
-            PA_D_f.append(np.abs(pPA_Dm[i+1] - pPA_Dm[i]))
-            DPas_D_f.append(np.abs(pDPas_Dm[i+1] - pDPas_Dm[i]))
-            LPas_D_f.append(np.abs(pLPas_Dm[i+1] - pLPas_Dm[i]))
-            Vitesse_D_f.append(np.abs(pVitesse_Dm[i+1] - pVitesse_Dm[i]))
-            SA_D_f.append(np.abs(pSA_Dm[i+1] - pSA_Dm[i]))
+            PA_D_f.append(np.abs(pPA_Dm[i] - PA_D_m))
+            DPas_D_f.append(np.abs(pDPas_Dm[i] - DPas_D_m))
+            LPas_D_f.append(np.abs(pLPas_Dm[i] - LPas_D_m))
+            Vitesse_D_f.append(np.abs(pVitesse_Dm[i] - Vitesse_D_m))
+            SA_D_f.append(np.abs(pSA_Dm[i] - SA_D_m))
       
       # COTE GAUCHE
         PA_G = []
@@ -196,11 +196,11 @@ if st.button("Lancer le calcul du score eGVI"):
         pVitesse_Gm = []
         pSA_Gm = []
         for i in [0, 1, 2] : 
-            pPA_Gm.append(PA_G[i] * 100 / PA_G_m) 
-            pDPas_Gm.append(DPas_G[i] * 100 / DPas_G_m)
-            pLPas_Gm.append(LPas_G[i] * 100 / LPas_G_m)
-            pVitesse_Gm.append(Vitesse_G[i] * 100 / Vitesse_G_m)
-            pSA_Gm.append(SA_G[i] * 100 / SA_G_m)
+            pPA_Gm.append(PA_G[i] / PA_G_m * 100 ) 
+            pDPas_Gm.append(DPas_G[i] / DPas_G_m * 100 )
+            pLPas_Gm.append(LPas_G[i] / LPas_G_m * 100 )
+            pVitesse_Gm.append(Vitesse_G[i] / Vitesse_G_m * 100 )
+            pSA_Gm.append(SA_G[i] / SA_G_m  * 100 )
       
         # Différence absolue
         PA_G_f = []
@@ -210,11 +210,11 @@ if st.button("Lancer le calcul du score eGVI"):
         SA_G_f = []
       
         for i in [0, 1]:
-            PA_G_f.append(np.abs(pPA_Gm[i+1] - pPA_Gm[i]))
-            DPas_G_f.append(np.abs(pDPas_Gm[i+1] - pDPas_Gm[i]))
-            LPas_G_f.append(np.abs(pLPas_Gm[i+1] - pLPas_Gm[i]))
-            Vitesse_G_f.append(np.abs(pVitesse_Gm[i+1] - pVitesse_Gm[i]))
-            SA_G_f.append(np.abs(pSA_Gm[i+1] - pSA_Gm[i]))
+            PA_G_f.append(np.abs(pPA_Gm[i] - PA_G_m))
+            DPas_G_f.append(np.abs(pDPas_Gm[i] - DPas_G_m))
+            LPas_G_f.append(np.abs(pLPas_Gm[i] - LPas_G_m))
+            Vitesse_G_f.append(np.abs(pVitesse_Gm[i] - Vitesse_G_m))
+            SA_G_f.append(np.abs(pSA_Gm[i] - SA_G_m))
       
         # Moyenne des différences absolues 
         # Droit : 
